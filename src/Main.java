@@ -6,7 +6,7 @@ public class Main {
         /**
          * примитивы
          */
-        int age = 12;
+        int age = 25;
         double wallet = 10.50;
         boolean isSchoolBoy = true;
         char grade = 'A';
