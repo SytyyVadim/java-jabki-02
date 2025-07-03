@@ -218,7 +218,7 @@ public class Main {
         } else {
             retStr = "ожирение";
         }
-        System.out.println("Задание №5. Ваш индекса массы тела: " + bmi + ", категория: " +retStr);
+        System.out.println("Задание №5. Ваш индекса массы тела: " + bmi + ", категория: " + retStr);
 
         //Задание №6. Выведите в консоль таблицу истинности для операторов && и ||
         boolean a1, b1;
@@ -226,27 +226,31 @@ public class Main {
         System.out.println("A\tB\tA && B\tA || B");
         System.out.println("-----------------------------");
 
-        a1 = false; b1 = false;
+        a1 = false;
+        b1 = false;
         System.out.println(a1 + "\t" + b1 + "\t" + (a1 && b1) + "\t" + (a1 || b1));
 
-        a1 = false; b1 = true;
+        a1 = false;
+        b1 = true;
         System.out.println(a1 + "\t" + b1 + "\t" + (a1 && b1) + "\t" + (a1 || b1));
 
-        a1 = true; b1 = false;
+        a1 = true;
+        b1 = false;
         System.out.println(a1 + "\t" + b1 + "\t" + (a1 && b1) + "\t" + (a1 || b1));
 
-        a1 = true; b1 = true;
+        a1 = true;
+        b1 = true;
         System.out.println(a1 + "\t" + b1 + "\t" + (a1 && b1) + "\t" + (a1 || b1));
 
         //Задание 7. Выведите в консоль квадрат.
         System.out.println("Задание 7. Выводим в консоль квадрат.");
-        int sizeSquare = 5; // размер квадрата
+        int sizeSquare = 5;
 
         for (int i = 0; i < sizeSquare; i++) {
             for (int j = 0; j < sizeSquare; j++) {
                 System.out.print("* ");
             }
-            System.out.println(); // переход на новую строку
+            System.out.println();
         }
 
         //Задание 8. Выведите в консоль полый квадрат.
@@ -256,33 +260,30 @@ public class Main {
 
         for (int i = 0; i < heightSquare; i++) {
             for (int j = 0; j < widthSquare; j++) {
-                // если верхняя/нижняя строка или крайние столбцы — выводим звёздочку
                 if (i == 0 || i == heightSquare - 1 || j == 0 || j == widthSquare - 1) {
                     System.out.print("* ");
                 } else {
-                    System.out.print("  "); // внутри — пробелы
+                    System.out.print("  ");
                 }
             }
-            System.out.println(); // переход на следующую строку
+            System.out.println();
         }
 
         //Задание 9. Выведите в консоль ромб
         System.out.println("Задание 9. Выводим в консоль ромб.");
-        int rhombSize = 9; // нечётное число: 5, 7, 9 и т.д.
+        int rhombSize = 9;
         int half = rhombSize / 2;
 
         for (int i = 0; i < rhombSize; i++) {
             int starsInRow = i <= half
-                    ? 1 + i * 2            // верхняя часть
-                    : 1 + (rhombSize - 1 - i) * 2; // нижняя часть
+                    ? 1 + i * 2
+                    : 1 + (rhombSize - 1 - i) * 2;
 
             int spaces = (rhombSize - starsInRow) / 2;
 
-            //рисуем отступы
             for (int s = 0; s < spaces; s++) {
                 System.out.print(" ");
             }
-            //рисуем линии
             for (int s = 0; s < starsInRow; s++) {
                 System.out.print("*");
             }
@@ -387,14 +388,29 @@ public class Main {
 
         System.out.print("Задание 1. switch. ");
         switch (dayNumber) {
-            case 1: dayName = "Понедельник"; break;
-            case 2: dayName = "Вторник"; break;
-            case 3: dayName = "Среда"; break;
-            case 4: dayName = "Четверг"; break;
-            case 5: dayName = "Пятница"; break;
-            case 6: dayName = "Суббота"; break;
-            case 7: dayName = "Воскресенье"; break;
-            default: dayName = "Ошибка";
+            case 1:
+                dayName = "Понедельник";
+                break;
+            case 2:
+                dayName = "Вторник";
+                break;
+            case 3:
+                dayName = "Среда";
+                break;
+            case 4:
+                dayName = "Четверг";
+                break;
+            case 5:
+                dayName = "Пятница";
+                break;
+            case 6:
+                dayName = "Суббота";
+                break;
+            case 7:
+                dayName = "Воскресенье";
+                break;
+            default:
+                dayName = "Ошибка";
         }
         System.out.println(dayName);
 
@@ -404,12 +420,23 @@ public class Main {
 
         System.out.print("Задание 2. switch. ");
         switch (grade1) {
-            case 1: gradeDescription = "Очень плохо"; break;
-            case 2: gradeDescription = "Плохо"; break;
-            case 3: gradeDescription = "Удовлетворительно"; break;
-            case 4: gradeDescription = "Хорошо"; break;
-            case 5: gradeDescription = "Отлично"; break;
-            default: gradeDescription = "Ошибка";
+            case 1:
+                gradeDescription = "Очень плохо";
+                break;
+            case 2:
+                gradeDescription = "Плохо";
+                break;
+            case 3:
+                gradeDescription = "Удовлетворительно";
+                break;
+            case 4:
+                gradeDescription = "Хорошо";
+                break;
+            case 5:
+                gradeDescription = "Отлично";
+                break;
+            default:
+                gradeDescription = "Ошибка";
         }
         System.out.println(gradeDescription);
 
@@ -438,7 +465,7 @@ public class Main {
         System.out.println("Максимальное число: " + maxNumber);
 
         //Задание 3. for
-        int n = 7;  // число для таблицы умножения
+        int n = 7;
 
         System.out.print("Задание 3. for. ");
         for (int i = 1; i <= 10; i++) {
@@ -468,7 +495,7 @@ public class Main {
         System.out.println("Количество четных чисел от 1 до 50: " + evenCount);
 
         //Задание 1. while
-        int number = 101; // начинаем с числа, сразу больше 100
+        int number = 101;
 
         System.out.print("Задание 1. while: ");
         while (number % 7 != 0) {
@@ -477,9 +504,9 @@ public class Main {
         System.out.println("Наименьшее число > 100, делящееся на 7: " + number);
 
         //Задание 2. while
-        int num = 5;           // число, для которого считаем факториал
-        int factorialResult = 1;  // переменная для хранения результата факториала
-        int currentMultiplier = 1; // текущий множитель в цикле
+        int num = 5;
+        int factorialResult = 1;
+        int currentMultiplier = 1;
 
         System.out.print("Задание 2. while: ");
         while (currentMultiplier <= num) {
@@ -489,13 +516,13 @@ public class Main {
         System.out.println("Факториал числа " + num + " равен " + factorialResult);
 
         //Задание 3. while
-        int numb = 29;          // число для проверки
-        boolean isPrime = true;   // флаг для результата
-        int divisor = 2;          // текущий делитель
+        int numb = 29;
+        boolean isPrime = true;
+        int divisor = 2;
 
         System.out.print("Задание 3. while: ");
         if (numb <= 1) {
-            isPrime = false;      // числа <= 1 не простые
+            isPrime = false;
         } else {
             while (divisor * divisor <= numb) {
                 if (numb % divisor == 0) {
@@ -529,15 +556,15 @@ public class Main {
         System.out.println(res.toString());
 
         //Задание 1. break & continue
-        boolean first = true; // для контроля пробела
+        boolean first = true;
 
         System.out.print("Задание 1. break & continue: ");
         for (int i = 1; i <= 20; i++) {
             if (i > 18) {
-                break;  // остановка, если i больше 18
+                break;
             }
             if (i % 3 == 0) {
-                continue;  // пропускаем числа, делящиеся на 3
+                continue;
             }
             if (!first) {
                 System.out.print(", ");
@@ -548,33 +575,32 @@ public class Main {
         System.out.println("");
 
         //Задание 2. break & continue
-        int[] nLst = {5, 8, 12, 0, 7, -3, 9, 4}; // пример списка чисел
+        int[] nLst = {5, 8, 12, 0, 7, -3, 9, 4};
         int sum = 0;
 
         System.out.print("Задание 2. break & continue: ");
         for (int num1 : nLst) {
             if (num1 < 0) {
-                break;  // прерываем цикл при первом отрицательном числе
+                break;
             }
             if (num1 == 0) {
-                continue; // пропускаем нули, не добавляем их к сумме
+                continue;
             }
             sum += num1;
         }
         System.out.println("Сумма элементов до первого отрицательного числа: " + sum);
 
         //Задание 3. break & continue
-        int[] numLst = {10, 20, 30, 25, 15, 5, 10}; // пример списка чисел
+        int[] numLst = {10, 20, 30, 25, 15, 5, 10};
         int sum1 = 0;
 
         System.out.print("Задание 3. break & continue: ");
         for (int num2 : numLst) {
             if (sum1 > 100) {
-                break;  // прерываем цикл, если сумма уже больше 100
+                break;
             }
             sum1 += num2;
         }
-
         System.out.println("Сумма элементов: " + sum1);
     }
 }
